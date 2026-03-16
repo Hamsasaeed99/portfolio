@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio - Hamsa Saeed</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,194 +13,277 @@
 
     <!-- Navigation Bar -->
     <nav class="main-nav">
+      <div class="nav-brand">Hamsa Saeed</div>
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#education">Education</a></li>
+        <li><a href="#education">Education & Courses</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="nav-cta">Contact Me</a></li>
       </ul>
     </nav>
 
     <!-- Cover Section -->
-    <section class="cover">
+    <header class="cover">
       <div class="cover-overlay"></div>
-      <div class="cover-content">
+      <div class="cover-content fade-in-up">
         <div class="cover-text">
+          <p class="greeting">Hello, I'm</p>
           <h1>Hamsa Saeed</h1>
-          <p class="title">Web Developer</p>
-          <p class="subtitle">
-            Fullstack .NET Developer | Building Modern Web Solutions
-          </p>
+          <p class="title">Fullstack .NET Developer</p>
+          <p class="subtitle">Building Efficient, Scalable & Modern Web Solutions</p>
+          <div class="header-actions">
+             <a href="#projects" class="btn primary">View My Work</a>
+             <a href="#contact" class="btn outline">Get In Touch</a>
+          </div>
         </div>
       </div>
-    </section>
+    </header>
 
     <main>
       <!-- About Section -->
-      <section id="about" class="about-me">
+      <section id="about" class="about-me scroll-reveal">
         <div class="container">
-          <h2 class="section-title">About Me</h2>
+          <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <div class="title-underline"></div>
+          </div>
+          
           <div class="about-content">
+            <div class="about-image-wrapper">
+              <img src="WhatsApp Image 2026-02-12 at 7.14.35 PM.jpeg" alt="Hamsa Saeed" class="profile-pic" />
+              <div class="image-backdrop"></div>
+            </div>
             <div class="about-text">
               <p>
-                I'm Hamsa Saeed, a .NET software developer passionate about building efficient and scalable applications. My journey into technology began during my studies in Computer Science, where I discovered my love for turning complex challenges into seamless digital solutions.
-
+                I'm <strong>Hamsa Saeed</strong>, a .NET software developer passionate about building efficient and scalable applications. My journey into technology began during my studies in Computer Science, where I discovered my love for turning complex challenges into seamless digital solutions.
               </p>
               <p>
                 I specialize in developing robust back-end systems with .NET, but my approach is always centered on creating a user-friendly experience. I am a collaborative and patient professional, dedicated to understanding client needs and delivering high-quality, timely results. My goal is to use my skills to build impactful software and contribute to a team-oriented environment.
-
               </p>
-            </div>
-            <div class="about-image">
-              <img src="WhatsApp Image 2026-02-12 at 7.14.35 PM.jpeg" alt="Hamsa Saeed" class="profile-pic" />
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Education Section -->
-      <section id="education">
-        <h2>Education</h2>
-        <ul>
-          <li>
-            <strong>Computer Science student</strong> – Alexandria University,
-            2023-2027
-          </li>
-        </ul>
-      </section>
-
-      <!-- Course Section -->
-      <section id="Course">
-        <h2>Courses</h2>
-        <ul>
-          <li>
-            <strong>Digital Egypt Pioneers initiative (DEPI)</strong> - Software
-            Development: Full stack .Net Web Developer, (Jul 2025-Dec 2025)
-          </li>
-        </ul>
+      <!-- Education & Courses Timeline Section -->
+      <section id="education" class="scroll-reveal">
+         <div class="section-header">
+            <h2>Education & Courses</h2>
+            <div class="title-underline"></div>
+         </div>
+         <div class="timeline">
+            <!-- Education Item -->
+            <div class="timeline-item">
+               <div class="timeline-dot"></div>
+               <div class="timeline-content">
+                  <h3>Computer Science</h3>
+                  <p class="timeline-subtitle">Alexandria University</p>
+                  <span class="timeline-date"><i class="far fa-calendar-alt"></i> 2023 - 2027</span>
+                  <p>Pursuing a degree in Computer Science, focusing on core software engineering principles, algorithms, and system design.</p>
+               </div>
+            </div>
+            
+            <!-- Course Item -->
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                   <h3>Digital Egypt Pioneers Initiative (DEPI)</h3>
+                   <p class="timeline-subtitle">Software Development: Full stack .NET Web Developer</p>
+                   <span class="timeline-date"><i class="far fa-calendar-alt"></i> Jul 2025 - Dec 2025</span>
+                   <p>Completed intensive training covering the full lifecycle of .NET web applications, from database design to frontend integration.</p>
+                </div>
+             </div>
+         </div>
       </section>
 
       <!-- Skills Section -->
-      <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-          <li>
-            <strong>Programming Languages:</strong><br />
-            Java, JS, C#
-          </li>
-          <li>
-            <strong>Soft skills</strong><br />
-            Problem solving
-            ,Communication
-            , Teamwork 
-            ,Adaptability 
-            ,Collaboration 
-            ,Emotional Intelligence
-            ,Self-Discipline 
-          </li>
-          <li>
-            <strong>Front-end </strong><br />
-            JS ,HTML5 ,CSS3
-          </li>
-          <li>
-            <strong>Back-end </strong><br />
-            C#, SQL Server Database ,web APIs
-          </li>
-          <li>
-            <strong>Another Technologies </strong><br />
-            <ol type="I">
-              <li>web Applications with : JavaFX,Java</li>
-            </ol>
-          </li>
-        </ul>
-      </section>
-
-      <!-- Offered Services Section -->
-      <section id="services">
-        <h2>Offered Services</h2>
-        <p>
-          As a web developer, I provide comprehensive services that cover the
-          entire process of building modern and scalable web solutions. I design
-          and develop responsive websites that work seamlessly across devices,
-          ensuring functionality and creativity. My services include full-stack
-          development using .NET, HTML, CSS, JavaScript, and Bootstrap. I also
-          specialize in API integration, database design, and website
-          optimization to deliver secure and high-performance applications
-          tailored to client needs.
-        </p>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects-list">
-          <div class="project-item">
-            <img src="Screenshot 2025-09-07 192544.jpg" alt="Decryption and Encryption Tool" />
-            <h3>Decryption and Encryption Tool</h3>
-            <p>
-              A desktop application that provides encryption and decryption
-              features to secure sensitive data.
-            </p>
-            <a
-              class="btn"
-              href="https://github.com/Hamsasaeed99/DecryptionAndEncryption"
-              target="_blank"
-              >View Project</a
-            >
-            <div class="case-study">
-              <strong>Impact:</strong> Improved data security by enabling users
-              to safely encrypt and decrypt files and text.
+      <section id="skills" class="scroll-reveal">
+        <div class="section-header">
+            <h2>Technical Skills</h2>
+            <div class="title-underline"></div>
+        </div>
+        
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="category-icon"><i class="fas fa-server"></i></div>
+                <h3>Back-end</h3>
+                <div class="skill-tags">
+                    <span class="tag">C#</span>
+                    <span class="tag">.NET Core</span>
+                    <span class="tag">Web APIs</span>
+                    <span class="tag">SQL Server</span>
+                    <span class="tag">Java</span>
+                </div>
             </div>
-          </div>
-            <div class="project-item">
-                <img src="photo-collage.png.png" alt="College System" />
-                <h3>College System</h3>
-                <p>
-                    A course registration system that manages students, professors, and course
-                    enrollments with authentication and role-based access.
-                </p>
-                <a
-                    class="btn"
-                    href="https://github.com/Hamsasaeed99/CollegeSystem"
-                    target="_blank"
-                    >View Project</a
-                >
-                <div class="case-study">
-                    <strong>Outcome:</strong> Simplified course enrollment and improved
-                    management for students and staff.
+
+            <div class="skill-category">
+                <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Front-end</h3>
+                <div class="skill-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">Bootstrap</span>
+                    <span class="tag">JavaFX</span>
+                </div>
+            </div>
+
+            <div class="skill-category">
+                <div class="category-icon"><i class="fas fa-users"></i></div>
+                <h3>Soft Skills</h3>
+                <div class="skill-tags">
+                    <span class="tag alt">Problem Solving</span>
+                    <span class="tag alt">Communication</span>
+                    <span class="tag alt">Teamwork</span>
+                    <span class="tag alt">Adaptability</span>
+                    <span class="tag alt">Emotional Intelligence</span>
                 </div>
             </div>
         </div>
       </section>
 
-    <!-- Contact Section -->
-<section id="contact">
-  <h2>Let's Work Together</h2>
-  <p>Ready to take your project to the next level? Get in touch!<br> 💌mail: hamsasaid616@gmail.com</p>
+      <!-- Offered Services Section -->
+      <section id="services" class="scroll-reveal">
+        <div class="section-header">
+            <h2>What I Do</h2>
+            <div class="title-underline"></div>
+        </div>
+        <p class="section-description">
+            I provide comprehensive services that cover the entire process of building modern and scalable web solutions tailored to your unique needs.
+        </p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fas fa-code service-icon"></i>
+                <h3>Full-stack Development</h3>
+                <p>Building end-to-end web applications using modern .NET architecture, structured databases, and responsive frontends.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-database service-icon"></i>
+                <h3>API & Database Integration</h3>
+                <p>Designing secure, high-performance RESTful APIs and optimizing SQL Server database structures for seamless data flow.</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-mobile-alt service-icon"></i>
+                <h3>Responsive UI Design</h3>
+                <p>Crafting accessible and functional user interfaces using HTML, CSS, JavaScript, and Bootstrap that look great on any device.</p>
+            </div>
+        </div>
+      </section>
 
-  <div class="contact-grid">
-    
-    <a href="https://github.com/Hamsasaeed99" target="_blank">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/hamsasaeed55" target="_blank">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
-    <a href="Hamsa Saeed OthmanCV.pdf" target="_blank">
-      <i class="fas fa-file-alt"></i> Resume
-    </a>
+      <!-- Projects Section -->
+      <section id="projects" class="scroll-reveal">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <div class="title-underline"></div>
+        </div>
+        <div class="projects-list">
+            
+          <div class="project-item">
+            <div class="project-image-container">
+                <img src="Screenshot 2025-09-07 192544.jpg" alt="Decryption and Encryption Tool" />
+                <div class="project-overlay">
+                    <a href="https://github.com/Hamsasaeed99/DecryptionAndEncryption" target="_blank" class="project-link-icon"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>Decryption and Encryption Tool</h3>
+                <p>A secure desktop application providing advanced encryption and decryption features to protect sensitive user data efficiently.</p>
+                <div class="case-study">
+                    <strong><i class="fas fa-chart-line"></i> Impact:</strong> Improved data security workflows for everyday users interacting with sensitive text or files.
+                </div>
+            </div>
+          </div>
 
-  </div>
+          <div class="project-item">
+            <div class="project-image-container">
+                <img src="photo-collage.png.png" alt="College System" />
+                <div class="project-overlay">
+                    <a href="https://github.com/Hamsasaeed99/CollegeSystem" target="_blank" class="project-link-icon"><i class="fab fa-github"></i> Source Code</a>
+                </div>
+            </div>
+            <div class="project-info">
+                <h3>College Management System</h3>
+                <p>A robust course registration platform managing students, professors, and enrollments with strict authentication and role-based access control.</p>
+                <div class="case-study">
+                    <strong><i class="fas fa-chart-line"></i> Outcome:</strong> Simplified the complex enrollment process, reducing administrative overhead for academic staff.
+                </div>
+            </div>
+          </div>
 
-  <a class="btn primary" href="https://wa.me/qr/BJYZMASIEOZRG1"target="_blank"> 📞 Contact Me</a>
-</section>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="scroll-reveal">
+        <div class="contact-card">
+            <h2>Let's Work Together</h2>
+            <p>Ready to take your project to the next level or just want to say hi? My inbox is always open.</p>
+            
+            <a href="mailto:hamsasaid616@gmail.com" class="email-link">
+                <i class="fas fa-envelope"></i> hamsasaid616@gmail.com
+            </a>
+
+            <div class="contact-grid">
+                <a href="https://github.com/Hamsasaeed99" target="_blank" class="social-link">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+                </a>
+                <a href="https://www.linkedin.com/in/hamsasaeed55" target="_blank" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+                </a>
+                <a href="Hamsa Saeed OthmanCV.pdf" target="_blank" class="social-link highlight">
+                <i class="fas fa-file-pdf"></i>
+                <span>Download Resume</span>
+                </a>
+            </div>
+
+            <a class="btn primary cta-btn" href="https://wa.me/qr/BJYZMASIEOZRG1" target="_blank"> 
+               <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+      </section>
 
     </main>
 
     <footer>
-      <p>© Hamsa Saeed 2025</p>
+      <div class="footer-content">
+          <p>© <span id="year">2025</span> Hamsa Saeed. Building the web with purpose.</p>
+          <div class="footer-socials">
+             <a href="https://github.com/Hamsasaeed99" target="_blank"><i class="fab fa-github"></i></a>
+             <a href="https://www.linkedin.com/in/hamsasaeed55" target="_blank"><i class="fab fa-linkedin"></i></a>
+          </div>
+      </div>
     </footer>
+
+    <!-- Simple Script for Animations and Dynamic Year -->
+    <script>
+        // Dynamic Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Scroll Reveal Animation Observer
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: Stop observing once visible if you only want it to animate once
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach((section) => {
+            observer.observe(section);
+        });
+    </script>
   </body>
 </html>
