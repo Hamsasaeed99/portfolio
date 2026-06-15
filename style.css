@@ -178,7 +178,7 @@ a {
 }
 
 .cover-text h1 {
-  font-size: 5rem;
+  font-size: clamp(2.2rem, 8vw, 5rem);
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -855,6 +855,61 @@ footer {
   transform: translateY(0);
 }
 
+/* --- Mobile Toggle Menu --- */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: var(--text-light);
+  transition: background var(--transition-fast);
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--text-light);
+  transition: transform var(--transition-normal), top var(--transition-normal);
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* Hamburger active animation */
+.nav-toggle.active .hamburger {
+  background: transparent;
+}
+
+.nav-toggle.active .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.nav-toggle.active .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 992px) {
   .cover-text h1 { font-size: 4rem; }
@@ -873,13 +928,39 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .main-nav { padding: 0 20px; }
+  .nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .main-nav ul {
-    display: none; /* In a real app, implement a hamburger menu here */
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: rgba(74, 58, 49, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    gap: 15px;
+    transform: translateY(-150%);
+    opacity: 0;
+    transition: transform var(--transition-normal), opacity var(--transition-normal);
+    pointer-events: none;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  .main-nav ul.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
   .nav-brand { font-size: 1.2rem; }
   
-  .cover-text h1 { font-size: 3rem; }
+  .cover-text h1 { font-size: clamp(2rem, 8vw, 3rem); }
   .cover-text .title { font-size: 1.5rem; }
   .header-actions { flex-direction: column; }
   
@@ -889,6 +970,19 @@ footer {
   .timeline::before { left: 15px; }
   .timeline-item { padding-left: 45px; }
   .timeline-dot { left: 6px; width: 16px; height: 16px; }
+  
+  /* Project mobile overrides: make overlays visible since no hover on touch */
+  .project-overlay {
+    opacity: 1 !important;
+    background: rgba(74, 58, 49, 0.45) !important;
+  }
+  
+  .project-link-icon {
+    transform: translateY(0) !important;
+    box-shadow: var(--shadow-md);
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
   
   .contact-card { padding: 40px 20px; }
   .contact-card h2 { font-size: 2.2rem; }
